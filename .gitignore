@@ -9,7 +9,6 @@ out/
 # C extensions
 *.so
 *.pkl
-*.mp4
 
 # Distribution / packaging
 .Python
@@ -32,11 +31,10 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-outputs/*
-
+AMASS/
 .vscode/*
 .vscode/settings.json
-
+video.mp4
 
 
 # PyInstaller
@@ -140,7 +138,7 @@ log/
 stageroom_train/ # tensorboard log
 trials/
 output_videos/
-demo_vis
-demo*
 *.pkl
+*.pt
 new_trials
+gh-md-toc

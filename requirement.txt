@@ -1,6 +1,5 @@
 numpy-stl
-vtk
-patchelf
+#patchelf
 termcolor
 torchgeometry
 scikit-image
@@ -20,10 +19,8 @@ lxml
 autograd
 scikit-learn
 chumpy
-patchelf
 wandb
 pyvirtualdisplay
-patchelf
 lxml
 ipdb
 chardet

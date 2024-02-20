@@ -4,6 +4,8 @@ import sys
 import pdb
 import os.path as osp
 sys.path.append(os.getcwd())
+# import inspect_fix
+
 import time
 # os.environ["MUJOCO_GL"] = 'egl'
 # os.environ['PYOPENGL_PLATFORM'] = 'egl'
@@ -18,6 +20,7 @@ print(f"mujoco.__version__: {mujoco.__version__}")
 ### SMPL
 # from smpl_sim.envs.humanoid_env import HumanoidEnv
 import yaml
+
 try:
     # Python < 3.9
     from importlib_resources import files
@@ -37,8 +40,12 @@ def main(cfg : DictConfig) -> None:
     env = eval(cfg.env.task)(cfg)
     print("environment initialized")
     env.reset()
+
+    # <camera pos="4.428 -0.014 3.161" xyaxes="0.003 1.000 0.000 -0.581 0.002 0.814"/>
+
     cur_t, T = 0, 0
-    max_T = np.inf
+    # max_T = np.inf
+    max_T = 4
     if cfg.env.render_mode == "rgb_array":
         max_T = 1
     frames = []
